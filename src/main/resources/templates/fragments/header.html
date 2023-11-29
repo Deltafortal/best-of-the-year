@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+
+	<!-- Header -->
+		<header 
+			th:fragment="header(title, name1, link1, name2, link2)"
+		> 
+			<div class="row mt-5 text-center">
+				<div class="col-5">
+					<h3>
+						<a class="navbar-brand" href="/" th:text="${title}"></a>
+					</h3>
+				</div>
+				<div class="col-7">
+					<a th:href="${link1}" class="btn btn-primary" th:text="${name1}" ></a>
+					<a th:href="${link2}" class="btn btn-primary" th:text="${name2}"></a>
+				</div>
+			</div>
+		</header>
+
+</body>
+</html>

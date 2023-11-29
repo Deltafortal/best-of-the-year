@@ -1,10 +1,41 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Insert title here</title>
+	<meta charset="ISO-8859-1">
+	<title>Best of Year</title>
+	
+	<!-- Bootstrap CSS -->
+	<link th:rel="stylesheet" th:href="@{/webjars/bootstrap/5.3.2/css/bootstrap.min.css}"/>
+
 </head>
+
 <body>
-	<h1>Best of the Year by <strong style="color:darkgoldenrod">[[${name}]]</strong></h1>
+	
+	<!-- Container -->
+	<div class="container">
+		
+	
+		<!-- Header -->
+		<header th:replace="fragments/header :: header('Best of', 'Movies', '/movies', 'Songs', '/songs')">
+		
+		</header>
+	
+	
+		<main class="mt-5 text-center">
+			
+			<h1>Best of the Year by <strong style="color:darkgoldenrod">[[${name}]]</strong></h1>
+			
+			<img style="height: 500px;" class="mt-3" th:src="@{/img/ComputerBoy.jpg}" alt="logo" />
+			
+			<p class="mt-3"> Una bellissima lista con le migliori canzoni e i migliori film</p>
+		</main>
+	
+	
+	</div>
+	
+	
+	<!-- Bootstrap Bundle with Popper -->
+	<script th:src="@{/webjars/bootstrap/5.3.2/js/bootstrap.bundle.min.js}"></script>
+	
 </body>
 </html>
